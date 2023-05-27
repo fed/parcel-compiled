@@ -1,0 +1,6 @@
+{
+  "parserBabelPlugins": [
+    "typescript",
+    "jsx"
+  ]
+}

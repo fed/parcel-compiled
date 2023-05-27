@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/strict",
+    "plugin:styled-components-a11y/strict"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "react", "jsx-a11y", "styled-components-a11y", "@compiled"],
+  "rules": {
+    "@compiled/jsx-pragma": "error", // Required by @compiled/react
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }] // Required by @compiled/react
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
